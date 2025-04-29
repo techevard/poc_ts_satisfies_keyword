@@ -5,13 +5,13 @@ interface User {
 
 // Exemple 1
 
-const resolutionAsStr = {
+const subscriptionAsStr = {
     id: 1,
     subscription: "netflex",
 }
 
-const castedStatisifies = resolutionAsStr satisfies User
-const castedStatic: User = resolutionAsStr
+const castedStatisifies = subscriptionAsStr satisfies User
+const castedStatic: User = subscriptionAsStr
 
 // Could call String method, even if could be number[]. 
 castedStatisifies.subscription.toUpperCase()
@@ -20,13 +20,13 @@ castedStatic.subscription.toUpperCase()
 
 // Exemple 2
 
-const resolutionAsStrArray = {
+const subscriptionAsStrArray = {
     id: 1,
     subscription: [1, 2],
 }
 
-const castedEx2Statisifies = resolutionAsStrArray satisfies User
-const castedEx2Static: User = resolutionAsStrArray
+const castedEx2Statisifies = subscriptionAsStrArray satisfies User
+const castedEx2Static: User = subscriptionAsStrArray
 
 // Impossible to call String methood because subscription is typeof number[]
 castedEx2Statisifies.subscription.toUpperCase()
